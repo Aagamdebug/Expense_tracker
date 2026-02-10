@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   </head>
+<body>
+<header>
+    <h1>Expense Tracker</h1>
+    <p>Track your daily expenses</p>
+</header>
+
+<div class="container">
+
+    <!-- Add Expense Section -->
+    <div class="card">
+        <h2>Add Expense</h2>
+        <form>
+            <div class="form-group">
+                <label>Title</label>
+                <input type="text" placeholder="Expense title">
+            </div>
+
+            <div class="form-group">
+                <label>Amount</label>
+                <input type="number" placeholder="Amount">
+            </div>
+
+            <div class="form-group">
+                <label>Category</label>
+                <select>
+                    <option>Select category</option>
+                    <option>Food</option>
+                    <option>Travel</option>
+                    <option>Shopping</option>
+                    <option>Bills</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Date</label>
+                <input type="date">
+            </div>
+
+            <button type="button">Add Expense</button>
+        </form>
+    </div>
+
+    <!-- Expense List Section -->
+    <div class="card">
+        <h2>Expense List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sample Expense</td>
+                    <td>₹500</td>
+                    <td>Food</td>
+                    <td>2026-02-09</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Expense Tracker</p>
+</footer>
+
+</body>
+</html>
